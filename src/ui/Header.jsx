@@ -33,61 +33,18 @@ function Header() {
         <nav
           className={`${!showSideBar ? 'translate-x-[-1000px]' : 'translate-x-0'} absolute left-0 top-0 z-10 h-screen w-[300px] bg-white py-3 transition-all duration-300 ease-in-out md:relative md:h-full md:translate-x-0 md:overflow-visible md:bg-transparent md:p-0`}
         >
-          {/* <button className="bg-none" onClick={() => setShowSideBar(false)}>
-            <HiOutlineXMark className="size-6" />
-          </button> */}
           <ul className="flex flex-col gap-2 text-gray-900 md:flex-row md:justify-between">
-            <div className="flex justify-between border-b border-b-gray-200 md:gap-8 md:border-none">
-              <li
-                className="flex w-full items-center justify-center py-2 font-semibold md:font-normal"
-                onClick={(e) => setShowSubNav((s) => !s)}
-              >
-                <NavLink to="/men">Men</NavLink>
-              </li>
-              <li className="flex w-full items-center justify-center py-2 font-semibold md:font-normal">
-                <NavLink to="/women">Women</NavLink>
-              </li>
-            </div>
-            {/* {showSubNav && (
-              <div className="bg-black md:absolute md:left-[0rem] md:top-[50px] md:h-full md:w-full"></div>
-            )} */}
-            <div
-              className={`w-[500px] p-2 px-4 shadow-md md:absolute md:top-[51px] md:grid md:grid-cols-2 md:bg-white md:py-6 ${showSubNav ? '' : 'md:hidden'} `}
-            >
-              <div>
-                <span className="mb-4 inline-block font-semibold">
-                  Categories
-                </span>
-
-                <ul className="mb-4 flex flex-col gap-4 text-gray-500">
-                  <li>Basic Tees</li>
-                  <li>Artword Tess</li>
-                  <li>Bottoms</li>
-                  <li>Underwears</li>
-                  <li>Accessories</li>
-                </ul>
-              </div>
-              <div>
-                <span className="mb-4 inline-block font-semibold">
-                  Collection
-                </span>
-                <ul className="mb-4 flex flex-col gap-4 text-gray-500">
-                  <li>Everything</li>
-                  <li>Artword Tess</li>
-                  <li>Core</li>
-                  <li>New Arrivals</li>
-                  <li>Sale</li>
-                </ul>
-              </div>
-            </div>
-            <li className="border-b border-b-gray-200 p-2 px-4 md:border-none">
+            <li className="border-b border-b-gray-200 p-2 px-4 hover:text-blue-600 md:border-none">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="border-b border-b-gray-200 p-2 px-4 hover:text-blue-600 md:border-none">
+              <NavLink to="/collections">Collections</NavLink>
+            </li>
+            <li className="border-b border-b-gray-200 p-2 px-4 hover:text-blue-600 md:border-none">
+              <NavLink to="/categories">Categories</NavLink>
+            </li>
+            <li className="border-b border-b-gray-200 p-2 px-4 hover:text-blue-600 md:border-none">
               <NavLink to="/products">Products</NavLink>
-            </li>
-            <li className="border-b border-b-gray-200 p-2 px-4 md:border-none">
-              <NavLink to="/products">Company</NavLink>
-            </li>
-            <li className="border-b border-b-gray-200 p-2 px-4 md:border-none">
-              <NavLink to="/products">Stores</NavLink>
             </li>
           </ul>
         </nav>

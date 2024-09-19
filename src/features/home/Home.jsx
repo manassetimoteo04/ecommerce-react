@@ -1,5 +1,7 @@
+import CtaSection from '../../ui/CtaSection';
 import HeroSection from '../../ui/HeroSection';
 import SectionByCategory from './SectionByCategory';
+import SectionFeature from './SectionFeature';
 import TrendingProducts from './TrendingProducts';
 
 function Home() {
@@ -8,6 +10,8 @@ function Home() {
       <HeroSection />
       <SectionByCategory />
       <TrendingProducts />
+      <CtaSection />
+      <SectionFeature />
     </main>
   );
 }
